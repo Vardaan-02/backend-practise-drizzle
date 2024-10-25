@@ -1,7 +1,7 @@
 import { verify_token } from "../utils/tokens";
 import { NextFunction, Request, Response } from "express";
 
-export async function isAuthenticated(
+export function isAuthenticated(
   req: Request,
   res: Response,
   next: NextFunction
