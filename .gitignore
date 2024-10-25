@@ -1,0 +1,9 @@
+# Ignore environment and credentials files
+.env
+
+# Node modules and logs
+node_modules/
+*.log
+
+# Build and cache
+dist/
