@@ -6,10 +6,11 @@ import { send_email_otp } from "../controllers/auth/send_email_otp.controller";
 import { verify_email_otp } from "../controllers/auth/verify_email_otp.controller";
 import { change_password } from "../controllers/auth/change_password";
 import { isAuthenticated } from "../middleware/auth.middleware";
+import upload from "../utils/multer";
 
 const router = Router();
 
-router.post("/register", register); //Done
+router.post("/register", upload.single("avatar"), register);
 router.post("/login", login); //Done
 router.get("/logout", isAuthenticated, logout); //Done
 router.post("/send-email-otp", send_email_otp); //Done

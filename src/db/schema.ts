@@ -17,6 +17,7 @@ export const usersTable = pgTable("users", {
   otp: varchar("otp", { length: 255 }),
   isOTPValid: timestamp("isOTPValid"),
   passwordChangeTime: timestamp("passwordChangeTime"),
+  avatar: varchar("avatar"),
 });
 
 export const postsTable = pgTable("post", {
